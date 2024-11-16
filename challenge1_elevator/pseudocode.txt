@@ -1,0 +1,51 @@
+iClass Elevator:
+    Initialize currentFloor to 0
+    Initialize direction to IDLE
+    Initialize upQueue as an empty list (stores requests for floors above currentFloor)
+    Initialize downQueue as an empty list (stores requests for floors below currentFloor)
+
+    Method addRequest(floor):
+        IF floor > currentFloor:
+            Add floor to upQueue
+        ELSE IF floor < currentFloor:
+            Add floor to downQueue
+
+    Method move():
+        IF direction is UP or IDLE:
+            Call processUpQueue()
+            IF direction is IDLE after processing upQueue:
+                Call processDownQueue()
+        ELSE IF direction is DOWN:
+            Call processDownQueue()
+            IF direction is IDLE after processing downQueue:
+                Call processUpQueue()
+
+    Method processUpQueue():
+        WHILE upQueue is not empty:
+            nextFloor = Remove the first element from upQueue
+            Call goToFloor(nextFloor)
+        
+        IF downQueue is empty:
+            Set direction to IDLE
+        ELSE:
+            Set direction to DOWN
+
+    Method processDownQueue():
+        WHILE downQueue is not empty:
+            nextFloor = Remove the first element from downQueue
+            Call goToFloor(nextFloor)
+        
+        IF upQueue is empty:
+            Set direction to IDLE
+        ELSE:
+            Set direction to UP
+
+    Method goToFloor(floor):
+        Print "Moving from currentFloor to floor"
+        Update currentFloor to floor
+        Print "Arrived at floor"
+
+    Method status():
+        Print "Current floor: currentFloor"
+        Print "Current direction: direction"
+
