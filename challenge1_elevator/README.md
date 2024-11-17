@@ -46,17 +46,17 @@ Current direction: IDLE
 
 ## Project Structure
 bluestaq_software_challenge/
-    challenge1_elevator/
-        src/
-            main/
-                java/
-                    elevator/
-                        Elevator.java
-                        Direction.java
-                        ElevatorController.java
-    README.md
-    .gitignore
-    bin/
+--->challenge1_elevator/
+------->src/
+----------->main/
+--------------->java/
+------------------->elevator/
+----------------------->Elevator.java
+----------------------->Direction.java
+----------------------->ElevatorController.java
+--->README.md
+--->.gitignore
+--->bin/
 
 ## Assumptions 
 - The building has floors numbered 0 through 9. 
