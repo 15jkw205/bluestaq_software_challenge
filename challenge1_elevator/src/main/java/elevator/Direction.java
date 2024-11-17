@@ -5,3 +5,4 @@ public enum Direction {
     DOWN,
     IDLE
 }
+

@@ -44,7 +44,7 @@ Current floor: 3
 Current direction: IDLE 
 ```
 
-## Project Structure 
+## Project Structure
 bluestaq_software_challenge/
 ├── challenge1_elevator/
 │   ├── src/
@@ -57,6 +57,7 @@ bluestaq_software_challenge/
 │   ├── README.md
 │   └── .gitignore
 └── bin/
+
 
 ## Assumptions 
 - The building has floors numbered 0 through 9. 
