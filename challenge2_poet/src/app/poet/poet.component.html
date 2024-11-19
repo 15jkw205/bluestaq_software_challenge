@@ -1,0 +1,18 @@
+<div class="search-container">
+  <h2>Find Poems</h2>
+  <input [(ngModel)]="author" placeholder="Enter Author" />
+  <input [(ngModel)]="title" placeholder="Enter Title" />
+  <button (click)="fetchPoems()">Search</button>
+
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  
+  <div *ngIf="poems.length > 0">
+    <h3>Results:</h3>
+    <ul>
+      <li *ngFor="let poem of poems"> 
+        <h4>{{ poem.title }} by {{ poem.author }}</h4>
+        <p>{{ poem.lines.join(' ') }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
