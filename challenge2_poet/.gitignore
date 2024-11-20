@@ -1,0 +1,23 @@
+# Angular specific files
+node_modules/
+dist/
+out-tsc/
+coverage/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.temp
+*.tmp
+*.bak
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files
+src/environments/environment*.ts

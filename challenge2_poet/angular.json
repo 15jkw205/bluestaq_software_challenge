@@ -4,8 +4,9 @@
   "projects": {
     "challenge2_poet": {
       "projectType": "application",
-      "root": "",
+      "root": "src",
       "sourceRoot": "src",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -14,13 +15,34 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "tsconfig.json",
+            "assets": ["src/assets"],
             "styles": ["src/styles.css"],
             "scripts": []
+          }
+        }, 
+        "serve": { 
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { 
+            "browserTarget": "challenge2_poet:build"
+          }, 
+          "configurations": {
+            "production": { 
+              "browserTarget": "challenge2_poet:build:production"
+            }
+          }
+        }, 
+        "lint": { 
+          "builder": "@angular-devkit/build-angular:eslint", 
+          "options": { 
+            "tsConfig": ["tsconfig.app.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     }
-  }
+  }, 
+  "defaultProject": "challenge2_poet"
+
 }
 

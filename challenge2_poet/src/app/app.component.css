@@ -1,0 +1,12 @@
+/* Global styles for the root component */
+.app-container {
+  text-align: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
