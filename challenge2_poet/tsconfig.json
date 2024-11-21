@@ -9,12 +9,16 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "target": "ES2022",
+    "module": "ES2022",
+    "strict": true,
+    "skipLibCheck": true, // Add this to avoid library checking errors
+    "forceConsistentCasingInFileNames": true, // Add this for consistent file handling
+    "lib": ["es2022", "dom"] // Update lib to match ES2022
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "strictTemplates": true // Add this for stricter template checks
   }
 }

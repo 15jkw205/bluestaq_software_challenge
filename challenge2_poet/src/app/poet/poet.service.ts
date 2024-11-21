@@ -13,7 +13,7 @@ export class PoetService {
 
   // Fetch poems based on author and title 
   getPoems(author: string, title: string): Observable<any> { 
-    const url = `${this.apiUrl}/author,title/${author},${title}`; 
+    const url = `${this.apiUrl}/title,author/${title};${author}`; 
     return this.http.get(url).pipe(catchError(this.handleError)); 
   }
 
